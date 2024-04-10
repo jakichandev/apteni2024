@@ -21,8 +21,8 @@ def openSingle(event, aptene):
         #se il valore ciclato corrisponde a selected assegna matchedAptene all'oggetto corrisposto
         if item["title"] == selected:
             matchedAptene = item
-            aptene.configText(matchedAptene["id"], matchedAptene["title"], matchedAptene["description"])
-            print(aptene.id)
+            print(matchedAptene["cas"])
+            aptene.configText(matchedAptene["id"], matchedAptene["title"], matchedAptene["description"], matchedAptene["pm"], matchedAptene["cas"], matchedAptene["category"], matchedAptene["cod-firm"], matchedAptene["formula"], matchedAptene["synonymus"])
             aptene.changeText()
         
 

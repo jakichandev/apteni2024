@@ -38,11 +38,18 @@ searchInput = Entry(mainFrame, background="#fff", foreground=TEXT_COLOR, border=
 searchInput.grid(row=1, column=0, pady=(10))
 
 singleApteneFrame = Frame(root, bg=TEXT_COLOR)
+singleApteneFrame.columnconfigure(0, weight=1)
+singleApteneFrame.columnconfigure(1, weight=1)
+singleApteneFrame.columnconfigure(2, weight=1)
+singleApteneFrame.columnconfigure(3, weight=1)
 singleApteneFrame.rowconfigure(0, weight=1)
 singleApteneFrame.rowconfigure(1, weight=1)
+singleApteneFrame.rowconfigure(2, weight=1)
+singleApteneFrame.rowconfigure(3, weight=1)
+singleApteneFrame.rowconfigure(4, weight=1)
 singleApteneFrame.grid(row=0, column=1, ipadx=10, ipady=10)
 
-aptene = Aptene(None, None, None, singleApteneFrame)
+aptene = Aptene(singleApteneFrame)
 
 aptene.createWidgets()
 aptene.showInGUI()
