@@ -13,11 +13,12 @@ allApteni = list(data)
 root = Tk()
 root.title("Apteni 2024")
 root.geometry("800x600")
-root.minsize(400,200)
+root.minsize(500,300)
 root.configure(background=TEXT_COLOR)
 
 root.columnconfigure(0, weight=1),
 root.columnconfigure(1, weight=1),
+root.columnconfigure(2, weight=1)
 root.rowconfigure(0, weight=1)
 root.rowconfigure(1, weight=1)
 
@@ -29,15 +30,15 @@ mainFrame.rowconfigure(2, weight=1)
 mainFrame.rowconfigure(3, weight=1)
 
 listFrame = Frame(root, bg=TEXT_COLOR)
-listFrame.grid(row=1,column=0, sticky=N)
+listFrame.grid(row=0,column=1, rowspan=2, sticky='nsew')
 
-welcomeLabel = Label(mainFrame, text="Apteni 2024\nLa lista ufficiale", font="Helvetica, 25", bg=TEXT_COLOR, foreground="#fff").grid(row=0, column=0)
+welcomeLabel = Label(mainFrame, text="Apteni 2024\nper test", font="Helvetica, 25", bg=TEXT_COLOR, foreground="#fff").grid(row=0, column=0)
 
 query = StringVar()
 searchInput = Entry(mainFrame, background="#fff", foreground=TEXT_COLOR, border=0, textvariable=query)
 searchInput.grid(row=1, column=0, pady=(10))
 
-singleApteneFrame = Frame(root, bg=TEXT_COLOR)
+singleApteneFrame = Frame(root, bg="#fff")
 singleApteneFrame.columnconfigure(0, weight=1)
 singleApteneFrame.columnconfigure(1, weight=1)
 singleApteneFrame.columnconfigure(2, weight=1)
@@ -47,7 +48,7 @@ singleApteneFrame.rowconfigure(1, weight=1)
 singleApteneFrame.rowconfigure(2, weight=1)
 singleApteneFrame.rowconfigure(3, weight=1)
 singleApteneFrame.rowconfigure(4, weight=1)
-singleApteneFrame.grid(row=0, column=1, ipadx=10, ipady=10)
+singleApteneFrame.grid(row=0, column=2, sticky='nsew')
 
 aptene = Aptene(singleApteneFrame)
 
