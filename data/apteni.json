@@ -1,43 +1,108 @@
 [
 {
     "id": "1",
-    "title": "Aptene1",
-    "description": "lorem ipsum"
+    "alias": "Abitol",
+    "title": "Alcol diidroabietilico",
+    "description": "Si trova nella colofonia, in adesivi, mascara, inchiostri ed è usato come plastificante nelle plastiche. Crocia con l'acido abietico e con l'alcol idroabietiico.",
+    "pm": "290,54",
+    "cas": "26266-77-3",
+    "cod-firm": "A04/11",
+    "formula": "",
+    "synonymus": "Abitol",
+    "note": "",
+    "category": ""
 },
 {
     "id": "2",
-    "title": "Aptene2",
-    "description": "lorem ipsum"
+    "alias": "Acamelin",
+    "title": "Acamelin",
+    "description": "Chinone isolato ed identificato nella Acacia melanoxylon (fam. Leguminacee).",
+    "pm": "192,17",
+    "cas": "74161-27-6",
+    "cod-firm": "",
+    "formula": "",
+    "synonymus": "Metossi metil diidrossibenzofurano-4,7- dione",
+    "note": "",
+    "category": ""
 },
 {
     "id": "3",
-    "title": "Aptene3",
-    "description": "lorem ipsumeeoeooeoeèèè"
+    "alias": "Aceclofenac",
+    "title": "Aceclofenac",
+    "description": "Derivato dall'acido fenilacetico, farmaco antiinfiammatorio non steroideo, usato nelle osteoartriti, artitri reumatoidi e spondiliti anchilosanti.",
+    "pm": "354,19",
+    "cas": "89796-99-6",
+    "cod-firm": "",
+    "formula": "",
+    "synonymus": "",
+    "note": "",
+    "category": "FD"
 },
 {
     "id": "4",
-    "title": "Aptene4",
-    "description": "lorem ipsum"
+    "alias": "Acetaldeide",
+    "title": "Aldeide acetica",
+    "description": "Intermedio per sisntesi di molti prodotti chimici, resine fenoliche ed ureiche. Può trovarsi nell'alcol etilico come denaturante, nelle gelatine e colle come indurente. Antimuffa. Il suo tetramero(metaldeide) è un solido bianco usato come combustibile nei fornelli da campo e come molluschicida.",
+    "pm": "44,05",
+    "cas": "75-07-0",
+    "cod-firm": "",
+    "formula": "",
+    "synonymus": "Acetaldeide",
+    "note": "",
+    "category": "OC"
 },
 {
     "id": "5",
-    "title": "Aptene5",
-    "description": "lorem ipsum aptene eteteetpteptepetpetpetpt"
+    "alias": "Acetaminobenzene",
+    "title": "Acetanilide",
+    "description": "Intermedio nelle sintesi di farmaci e coloranti, come additivo per l'acqua ossigenata e per vernici alla cellulosa, plasticizante nei polimeri e come acceleratore nell'industria della gomma.",
+    "pm": "135,16",
+    "cas": "103-84-4",
+    "cod-firm": "",
+    "formula": "CH₃CONHC₆H₅",
+    "synonymus": "Acetaminobenzene",
+    "note": "",
+    "category": ""
 },
 {
     "id": "6",
-    "title": "Aptene6",
-    "description": "lorem ipsum vrgornbobrroroororjborjobjrojb "
+    "alias": "Acetaminofene",
+    "title": "Paracetamolo",
+    "description": "Antiflogistico non steroideo con proprietà analgesiche ed antipiretiche. È il principale metabolita della fenacetina e dell' acetilanilide. Si usa nella produzione di coloranti azo ed in fotografia.",
+    "pm": "151,2",
+    "cas": "103-90-2",
+    "cod-firm": "A08/60",
+    "formula": "CH₃CONHC₆H₄OH",
+    "synonymus": "Acetaminofene",
+    "note": "",
+    "category": ""
+   
 },
 {
     "id": "7",
-    "title": "Aptene7",
-    "description": "lorem ipsum"
+    "alias": "Acetanilide",
+    "title": "Acetanilide",
+    "description": "Intermedio nelle sintesi di farmaci e coloranti, come additivo per l'acqua ossigenata e per vernici alla cellulosa, plasticizante nei polimeri e come acceleratore nell'industria della gomma.",
+    "pm": "135,16",
+    "cas": "103-84-4",
+    "cod-firm": "",
+    "formula": "CH₃CONHC₆H₅",
+    "synonymus": "Acetaminobenzene",
+    "note": "",
+    "category": ""
 },
 {
     "id": "8",
-    "title": "BENZOCAINA",
-    "description": "benzocaina"
+    "alias": "Acetato di cellulosa",
+    "title": "Acetato di cellulosa",
+    "description": "Nella fabbricazione delle gomme e della celluloide, nelle pellicole cinematografiche e fotografiche non infiammabili. Nelle vernici, anche per aerei, smalti e lacche. Nei nastri per registrazione, in tessuti resistenti all'acqua e nell'apprettatura e finisaggio dei tessuti, nei rivestimenti in pelle, nei fili elettrici come isolanti. Nei filtri per sigarette e stanghette per occhiali.",
+    "pm": "",
+    "cas": "9004-35-7",
+    "cod-firm": "",
+    "formula": "",
+    "synonymus": "",
+    "note": "",
+    "category": ""
 },
 {
     "id": "9",
