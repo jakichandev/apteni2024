@@ -12,59 +12,43 @@ allApteni = list(data)
 
 root = Tk()
 root.title("Apteni 2024")
-root.geometry("800x600")
-root.minsize(500,300)
-root.configure(background=TEXT_COLOR)
+root.geometry("800x800")
+root.minsize(600, 600)
 
-root.columnconfigure(0, weight=1),
-root.columnconfigure(1, weight=1),
-root.columnconfigure(2, weight=1)
-root.rowconfigure(0, weight=1)
-root.rowconfigure(1, weight=1)
+mainFrame = Frame(root, bg="#fff")
+mainFrame.rowconfigure((0,1,2), weight=1)
+mainFrame.columnconfigure((0,1,2), weight=1)
+mainFrame.place(relx=0, y=0, relheight=1, relwidth=0.35)
 
-mainFrame = Frame(root, bg=TEXT_COLOR)
-mainFrame.grid(row=0, column=0)
-mainFrame.rowconfigure(0, weight=1)
-mainFrame.rowconfigure(1, weight=1)
-mainFrame.rowconfigure(2, weight=1)
-mainFrame.rowconfigure(3, weight=1)
+listFrame = Frame(root, bg=BG_BASE)
+listFrame.place(relx=0.35, rely=0, relwidth=0.2, relheight=1)
 
-listFrame = Frame(root, bg=TEXT_COLOR)
-listFrame.grid(row=0,column=1, rowspan=2, sticky='nsew')
-
-welcomeLabel = Label(mainFrame, text="Apteni 2024\nper test", font="Helvetica, 25", bg=TEXT_COLOR, foreground="#fff").grid(row=0, column=0)
-
+welcomeLabel = Label(mainFrame, text="Apteni 2024\nper test", font=('helvetica', 30, 'bold'), bg="#fff", foreground=TEXT_COLOR).grid(row=1, column=1, sticky=N)
 query = StringVar()
 searchInput = Entry(mainFrame, background="#fff", foreground=TEXT_COLOR, border=0, textvariable=query)
-searchInput.grid(row=1, column=0, pady=(10))
+searchInput.grid(row=1, column=1, pady=10, sticky=S)
+submitSearch = Button(mainFrame, text="Cerca", highlightbackground="#fff", background=TEXT_COLOR)
+submitSearch.grid(row=2, column=1, sticky=N)
 
-singleApteneFrame = Frame(root, bg="#fff")
-singleApteneFrame.columnconfigure(0, weight=1)
-singleApteneFrame.columnconfigure(1, weight=1)
-singleApteneFrame.columnconfigure(2, weight=1)
-singleApteneFrame.columnconfigure(3, weight=1)
-singleApteneFrame.rowconfigure(0, weight=1)
-singleApteneFrame.rowconfigure(1, weight=1)
-singleApteneFrame.rowconfigure(2, weight=1)
-singleApteneFrame.rowconfigure(3, weight=1)
-singleApteneFrame.rowconfigure(4, weight=1)
-singleApteneFrame.grid(row=0, column=2, sticky='nsew')
+singleApteneParent = Frame(root, background=BG_BASE)
+singleApteneParent.place(relx=0.55, rely=0, relwidth=0.45, relheight=1)
 
+singleApteneFrame = Frame(singleApteneParent, bg=BG_BASE)
+singleApteneFrame.place(x=0, y=0, relwidth=1, relheight=1)
+singleApteneFrame.columnconfigure((0,1,2,3,4,5), weight=1)
+singleApteneFrame.rowconfigure((0,1,2,4), weight=1)
+singleApteneFrame.rowconfigure(3, weight=2)
 aptene = Aptene(singleApteneFrame)
-
 aptene.createWidgets()
 aptene.showInGUI()
-
-submitSearch = Button(mainFrame, text="Cerca", highlightbackground="#fff", background=TEXT_COLOR)
-submitSearch.grid(row=2, column=0)
-
 msgBox = Label(mainFrame, foreground="#E60D0D", background='#fff')
+lab = Label(listFrame, text='lista completa', bg=BG_BASE, foreground=TEXT_COLOR).pack(fill="x")
+listBox = Listbox(listFrame, background=BG_BASE, foreground="#fff", cursor="plus", selectbackground="#000", font=('helvetica', 12, 'bold'))
+submitSearch.bind('<Button-1>', lambda event: search(event, listBox, allApteni, aptene, msgBox))
 
-submitSearch.bind('<Button-1>', lambda event: search(event, listFrame, allApteni, aptene, msgBox))
 
-
-def search(event, listFrame, allApteni, apteneObj, msgWidget):
-    
+def search(event, widget, allApteni, apteneObj, msgWidget):
+    widget.delete(0,END)
     filteredApteni = list()
     word = query.get()
     msg = StringVar()
@@ -80,14 +64,14 @@ def search(event, listFrame, allApteni, apteneObj, msgWidget):
         msgWidget.grid_forget()
         print(len(filteredApteni))
         allApteni = filteredApteni
-        renderList(listFrame, allApteni, apteneObj)
+        renderList(widget, allApteni, apteneObj)
     else:
         msg.set('nessun risultato trovato!')
         msgWidget.config(text=msg.get())
-        msgWidget.grid(row=3,column=0)
+        msgWidget.grid(row=2,column=1)
+    
 
-
-renderList(listFrame, allApteni, aptene)
+renderList(listBox, allApteni, aptene)
 print(allApteni)
 
 

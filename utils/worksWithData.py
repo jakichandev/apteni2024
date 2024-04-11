@@ -28,14 +28,13 @@ def openSingle(event, aptene):
 
 
 
-def renderList(parent, data, aptene):
-    listBox = Listbox(parent, background=TEXT_COLOR, foreground="#fff", cursor="plus", selectbackground="#000", font=('helvetica', 12, 'bold'), width=40)
+def renderList(widget, data, aptene):
     
     #inserimento dati nella Listbox
     for item in data:
-        listBox.insert(END, item["title"])
+        widget.insert(END, item["title"])
 
-    listBox.grid(row=0, column=0, sticky='')
+    widget.pack(fill='both')
     
     #assegnamento funzione openSingle quando viene triggerato l'evento di selezione di un elemento della Listbox
-    listBox.bind('<<ListboxSelect>>', lambda cb: openSingle(cb, aptene))
+    widget.bind('<<ListboxSelect>>', lambda cb: openSingle(cb, aptene))

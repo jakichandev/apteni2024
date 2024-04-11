@@ -34,34 +34,34 @@ class Aptene():
     #Funzioni private setters per configurare i Widget da mostrare(inizializzati con campi vuoti)
     
     def __setId(self):
-        self.id_widget = Label(self.parent, text=self.id, foreground="#fff", background=TEXT_COLOR)
+        self.id_widget = Label(self.parent, text=self.id, foreground="#fff", background=BG_BASE)
 
     def __setTitle(self):
-        self.title_widget = Label(self.parent, text="", foreground="#fff", background=TEXT_COLOR, font=('Helvetica', 18, 'bold'))
+        self.title_widget = Label(self.parent, text="", foreground="#fff", background=BG_BASE, font=('Helvetica', 17, 'bold'))
 
     def __setDescription(self):
-        self.description_widget = Label(self.parent, text=self.description, foreground="#fff", background=TEXT_COLOR)
+        self.description_widget = Message(self.parent, text=self.description, foreground=TEXT_COLOR, background=BG_BASE, font=('helvetica', 15))
 
     def __setAlias(self):
-        self.alias_widget = Label(self.parent, text=self.alias, foreground="#fff", background=TEXT_COLOR)
+        self.alias_widget = Label(self.parent, text=self.alias, foreground=TEXT_COLOR, background=BG_BASE)
     
     def __setPm(self):
-        self.pm_widget = Label(self.parent, text="PM\n", foreground="#fff", background=TEXT_COLOR)
+        self.pm_widget = Label(self.parent, text="PM\n", foreground=TEXT_COLOR, background=BG_BASE)
 
     def __setCas(self):
-        self.cas_widget = Label(self.parent, text="CAS\n", foreground="#fff", background=TEXT_COLOR)
+        self.cas_widget = Label(self.parent, text="CAS\n", foreground=TEXT_COLOR, background=BG_BASE)
 
     def __setCategory(self):
-        self.category_widget = Label(self.parent, text='Categoria\n', foreground="#fff", background=TEXT_COLOR)
+        self.category_widget = Label(self.parent, text='Categoria\n', foreground=TEXT_COLOR, background=BG_BASE)
 
     def __setCodFirma(self):
-        self.cod_firma_widget = Label(self.parent, text="Cod. FIRMA\n", foreground="#fff", background=TEXT_COLOR)
+        self.cod_firma_widget = Label(self.parent, text="Cod. FIRMA\n", foreground=TEXT_COLOR, background=BG_BASE)
 
     def __setFormula(self):
-        self.formula_widget = Label(self.parent, text="Formula\n", foreground="#fff", background=TEXT_COLOR, width=10, height=5)
+        self.formula_widget = Label(self.parent, text="Formula\n", foreground=TEXT_COLOR, background=BG_BASE)
 
     def __setSynon(self):
-        self.synon_widget = Label(self.parent, text="Sinonimi: ", foreground="#fff", background=TEXT_COLOR)  
+        self.synon_widget = Label(self.parent, text="Sinonimi: ", foreground=TEXT_COLOR, background=BG_BASE)  
 
     #Funzione pubblica per eseguire i vari setters e creare i Widget
     
@@ -80,14 +80,14 @@ class Aptene():
     #Funzione pubblica per mostrare i widget
     
     def showInGUI(self):
-        self.title_widget.grid(row=0, column=0, columnspan=3, sticky=NW)
-        self.description_widget.grid(row=3, column=0, pady=10)
-        self.pm_widget.grid(row=1, column=0, sticky=W, pady=10)
-        self.cas_widget.grid(row=1, column=1, pady=10),
-        self.category_widget.grid(row=1, column=2, pady=10),
-        self.cod_firma_widget.grid(row=1, column=3, sticky=E, pady=10)
-        self.formula_widget.grid(row=2, column=0)
-        self.synon_widget.grid(row=4, column=0)
+        self.title_widget.grid(row=0, column=0, columnspan=6, sticky=NSEW)
+        self.description_widget.grid(row=3, column=0, columnspan=6, sticky=NSEW)
+        self.pm_widget.grid(row=1, column=1, sticky=NSEW)
+        self.cas_widget.grid(row=1, column=2, sticky=NSEW)
+        self.category_widget.grid(row=1, column=3, sticky=NSEW)
+        self.cod_firma_widget.grid(row=1, column=4, sticky=NSEW)
+        self.formula_widget.grid(row=2, column=1, sticky=NSEW)
+        self.synon_widget.grid(row=4, column=0, columnspan=6, sticky=NSEW)
 
     #Funzione pubblica per modificare il contenuto degli attributi
     
