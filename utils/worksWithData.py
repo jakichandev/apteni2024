@@ -34,7 +34,7 @@ def renderList(widget, data, aptene):
     for item in data:
         widget.insert(END, item["title"])
 
-    widget.pack(fill='both')
+    widget.pack(pady=5, padx=2, fill='both')
     
     #assegnamento funzione openSingle quando viene triggerato l'evento di selezione di un elemento della Listbox
     widget.bind('<<ListboxSelect>>', lambda cb: openSingle(cb, aptene))

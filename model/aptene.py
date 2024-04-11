@@ -34,34 +34,34 @@ class Aptene():
     #Funzioni private setters per configurare i Widget da mostrare(inizializzati con campi vuoti)
     
     def __setId(self):
-        self.id_widget = Label(self.parent, text=self.id, foreground="#fff", background=BG_BASE)
+        self.id_widget = Label(self.parent, text=self.id, foreground="#fff", background=BG_LIGHT)
 
     def __setTitle(self):
-        self.title_widget = Label(self.parent, text="", foreground="#fff", background=BG_BASE, font=('Helvetica', 17, 'bold'))
+        self.title_widget = Label(self.parent, text="", foreground="#fff", background=BG_LIGHT, font=('Helvetica', 17, 'bold'))
 
     def __setDescription(self):
-        self.description_widget = Message(self.parent, text=self.description, foreground=TEXT_COLOR, background=BG_BASE, font=('helvetica', 15))
+        self.description_widget = Message(self.parent, text=self.description, foreground="#fff", background=BG_LIGHT, font=('bodoni 72', 14), aspect=500)
 
     def __setAlias(self):
-        self.alias_widget = Label(self.parent, text=self.alias, foreground=TEXT_COLOR, background=BG_BASE)
+        self.alias_widget = Label(self.parent, text=self.alias, foreground=TEXT_COLOR, background=BG_LIGHT)
     
     def __setPm(self):
-        self.pm_widget = Label(self.parent, text="PM\n", foreground=TEXT_COLOR, background=BG_BASE)
+        self.pm_widget = Label(self.parent, text="PM\n", foreground=TEXT_COLOR, background=BG_LIGHT)
 
     def __setCas(self):
-        self.cas_widget = Label(self.parent, text="CAS\n", foreground=TEXT_COLOR, background=BG_BASE)
+        self.cas_widget = Label(self.parent, text="CAS\n", foreground=TEXT_COLOR, background=BG_LIGHT)
 
     def __setCategory(self):
-        self.category_widget = Label(self.parent, text='Categoria\n', foreground=TEXT_COLOR, background=BG_BASE)
+        self.category_widget = Label(self.parent, text='Categoria\n', foreground=TEXT_COLOR, background=BG_LIGHT)
 
     def __setCodFirma(self):
-        self.cod_firma_widget = Label(self.parent, text="Cod. FIRMA\n", foreground=TEXT_COLOR, background=BG_BASE)
+        self.cod_firma_widget = Label(self.parent, text="Cod. FIRMA\n", foreground=TEXT_COLOR, background=BG_LIGHT)
 
     def __setFormula(self):
-        self.formula_widget = Label(self.parent, text="Formula\n", foreground=TEXT_COLOR, background=BG_BASE)
+        self.formula_widget = Label(self.parent, text="Formula\n", foreground=TEXT_COLOR, background=BG_LIGHT)
 
     def __setSynon(self):
-        self.synon_widget = Label(self.parent, text="Sinonimi: ", foreground=TEXT_COLOR, background=BG_BASE)  
+        self.synon_widget = Label(self.parent, text="Sinonimi: ", foreground=TEXT_COLOR, background=BG_LIGHT)  
 
     #Funzione pubblica per eseguire i vari setters e creare i Widget
     

@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import font
 from tkinter import ttk
 import json
 from utils.constants import *
@@ -12,7 +13,7 @@ allApteni = list(data)
 
 root = Tk()
 root.title("Apteni 2024")
-root.geometry("800x800")
+root.geometry("1200x800")
 root.minsize(600, 600)
 
 mainFrame = Frame(root, bg="#fff")
@@ -30,20 +31,20 @@ searchInput.grid(row=1, column=1, pady=10, sticky=S)
 submitSearch = Button(mainFrame, text="Cerca", highlightbackground="#fff", background=TEXT_COLOR)
 submitSearch.grid(row=2, column=1, sticky=N)
 
-singleApteneParent = Frame(root, background=BG_BASE)
+singleApteneParent = Frame(root, background=BG_LIGHT)
 singleApteneParent.place(relx=0.55, rely=0, relwidth=0.45, relheight=1)
 
-singleApteneFrame = Frame(singleApteneParent, bg=BG_BASE)
+singleApteneFrame = Frame(singleApteneParent, bg=BG_LIGHT)
 singleApteneFrame.place(x=0, y=0, relwidth=1, relheight=1)
 singleApteneFrame.columnconfigure((0,1,2,3,4,5), weight=1)
 singleApteneFrame.rowconfigure((0,1,2,4), weight=1)
-singleApteneFrame.rowconfigure(3, weight=2)
+singleApteneFrame.rowconfigure(3, weight=3)
 aptene = Aptene(singleApteneFrame)
 aptene.createWidgets()
 aptene.showInGUI()
 msgBox = Label(mainFrame, foreground="#E60D0D", background='#fff')
-lab = Label(listFrame, text='lista completa', bg=BG_BASE, foreground=TEXT_COLOR).pack(fill="x")
-listBox = Listbox(listFrame, background=BG_BASE, foreground="#fff", cursor="plus", selectbackground="#000", font=('helvetica', 12, 'bold'))
+lab = Label(listFrame, text='Lista completa', bg=BG_BASE, foreground=TEXT_COLOR).pack(fill="x")
+listBox = Listbox(listFrame, background=BG_BASE, foreground="#fff", cursor="plus", selectbackground="#000", font=('helvetica', 12, 'bold'), borderwidth=0)
 submitSearch.bind('<Button-1>', lambda event: search(event, listBox, allApteni, aptene, msgBox))
 
 
