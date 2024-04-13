@@ -1,12 +1,15 @@
 from tkinter import *
-from tkinter import font
 from tkinter import ttk
 import json
 from utils.constants import *
 from utils.worksWithData import *
 from model.aptene import Aptene
+import sys
+from pathlib import Path
 
-fileData = open('./data/apteni.json')
+print(sys.executable)
+
+fileData = open(Path(__file__).parent /'data'/'apteni.json')
 data = json.load(fileData)
 fileData.close()
 allApteni = list(data)
@@ -73,7 +76,6 @@ def search(event, widget, allApteni, apteneObj, msgWidget):
     
 
 renderList(listBox, allApteni, aptene)
-print(allApteni)
 
 
 root.mainloop()

@@ -1,7 +1,7 @@
 from tkinter import *
 from utils.constants import *
 import json
-
+from pathlib import Path
 
 def openSingle(event, aptene):
 
@@ -12,7 +12,7 @@ def openSingle(event, aptene):
     selected = event.widget.get(ANCHOR)
 
     #apertura file apteni.json e ottenimento dati ricevuti da esso nella variabile apteniJson
-    filedata = open('./data/apteni.json')
+    filedata = open(Path(__file__).parent.parent /'data'/'apteni.json')
     apteniJson = json.load(filedata)
     filedata.close()
     
@@ -21,7 +21,6 @@ def openSingle(event, aptene):
         #se il valore ciclato corrisponde a selected assegna matchedAptene all'oggetto corrisposto
         if item["title"] == selected:
             matchedAptene = item
-            print(matchedAptene["cas"])
             aptene.configText(matchedAptene["id"], matchedAptene["title"], matchedAptene["description"], matchedAptene["pm"], matchedAptene["cas"], matchedAptene["category"], matchedAptene["cod-firm"], matchedAptene["formula"], matchedAptene["synonymus"])
             aptene.changeText()
         
