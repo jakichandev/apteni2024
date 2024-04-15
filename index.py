@@ -7,8 +7,6 @@ from model.aptene import Aptene
 import sys
 from pathlib import Path
 
-print(sys.executable)
-
 fileData = open(Path(__file__).parent /'data'/'apteni.json')
 data = json.load(fileData)
 fileData.close()
@@ -52,6 +50,7 @@ submitSearch.bind('<Button-1>', lambda event: search(event, listBox, allApteni, 
 
 
 def search(event, widget, allApteni, apteneObj, msgWidget):
+    
     widget.delete(0,END)
     filteredApteni = list()
     word = query.get()
@@ -60,13 +59,10 @@ def search(event, widget, allApteni, apteneObj, msgWidget):
     for aptene in allApteni:
         
         if word in aptene["title"] or word in aptene["title"].lower():
-            print(word)
-            print('true')
             filteredApteni.append(aptene)
   
     if (len(filteredApteni) > 0):
         msgWidget.grid_forget()
-        print(len(filteredApteni))
         allApteni = filteredApteni
         renderList(widget, allApteni, apteneObj)
     else:

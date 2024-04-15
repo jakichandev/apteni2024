@@ -1,0 +1,3 @@
+([('Apteni',
+   '/Users/jacopogianfaldoni/Apteni_2024/dist/Apteni',
+   'EXECUTABLE')],)
