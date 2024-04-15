@@ -5,7 +5,7 @@ a = Analysis(
     ['index.py'],
     pathex=[],
     binaries=[],
-    datas=[('data/apteni.json', './data')],
+    datas=[('data/apteni.json', 'data/')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
